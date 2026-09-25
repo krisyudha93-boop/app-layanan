@@ -48,6 +48,40 @@ class ServiceRequest extends Model
         ];
     }
 
+    protected static function booted(): void
+    {
+        static::creating(function (ServiceRequest $request) {
+            if (empty($request->request_number)) {
+                $prefix = 'REQ';
+                if ($request->service_type_id) {
+                    $prefix = ServiceType::find($request->service_type_id)?->code ?? 'REQ';
+                }
+                $request->request_number = NumberSequence::next($prefix);
+            }
+            if (empty($request->submitted_at)) {
+                $request->submitted_at = now();
+            }
+            if (empty($request->status)) {
+                $request->status = ServiceRequestStatus::SUBMITTED;
+            }
+        });
+
+        static::updated(function (ServiceRequest $request) {
+            if ($request->wasChanged('status')) {
+                $from = $request->getOriginal('status');
+                $fromVal = $from instanceof ServiceRequestStatus ? $from->value : $from;
+                $toVal = $request->status instanceof ServiceRequestStatus ? $request->status->value : $request->status;
+
+                $request->statusHistories()->create([
+                    'from_status' => $fromVal,
+                    'to_status' => $toVal,
+                    'notes' => $request->status_notes ?? 'Pembaruan status pengajuan',
+                    'user_id' => auth()->id() ?? $request->officer_id,
+                ]);
+            }
+        });
+    }
+
     public function serviceType(): BelongsTo
     {
         return $this->belongsTo(ServiceType::class);

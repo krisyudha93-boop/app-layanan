@@ -35,6 +35,36 @@ class Referral extends Model
         ];
     }
 
+    protected static function booted(): void
+    {
+        static::creating(function (Referral $referral) {
+            if (empty($referral->referral_number)) {
+                $referral->referral_number = NumberSequence::next('RJK');
+            }
+            if (empty($referral->referral_date)) {
+                $referral->referral_date = now();
+            }
+            if (empty($referral->status)) {
+                $referral->status = ReferralStatus::DRAFT;
+            }
+        });
+
+        static::updated(function (Referral $referral) {
+            if ($referral->wasChanged('status')) {
+                $from = $referral->getOriginal('status');
+                $fromVal = $from instanceof ReferralStatus ? $from->value : $from;
+                $toVal = $referral->status instanceof ReferralStatus ? $referral->status->value : $referral->status;
+
+                $referral->statusHistories()->create([
+                    'from_status' => $fromVal,
+                    'to_status' => $toVal,
+                    'notes' => $referral->status_notes ?? 'Pembaruan status rujukan',
+                    'user_id' => auth()->id() ?? $referral->officer_id,
+                ]);
+            }
+        });
+    }
+
     public function rehabilitationCase(): BelongsTo
     {
         return $this->belongsTo(RehabilitationCase::class);

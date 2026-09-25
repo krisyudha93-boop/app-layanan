@@ -16,6 +16,8 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(RolePermissionSeeder::class);
+
         $secUnit = WorkUnit::where('name', 'like', '%Sekretariat%')->first();
         $linjamsosUnit = WorkUnit::where('name', 'like', '%Perlindungan dan Jaminan Sosial%')->first();
         $rehsosUnit = WorkUnit::where('name', 'like', '%Rehabilitasi Sosial%')->first();
@@ -38,6 +40,7 @@ class UserSeeder extends Seeder
                 'district_id' => null,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['administrator'],
             ],
             // 2. Petugas Pelayanan / SIKS-NG (Linjamsos)
             [
@@ -49,6 +52,7 @@ class UserSeeder extends Seeder
                 'district_id' => null,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['petugas_dinsos'],
             ],
             // 3. Petugas Rehabilitasi Sosial
             [
@@ -60,6 +64,7 @@ class UserSeeder extends Seeder
                 'district_id' => null,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['petugas_dinsos'],
             ],
             // 4. Pejabat Penandatangan / Kabid Linjamsos (Paraf)
             [
@@ -71,6 +76,7 @@ class UserSeeder extends Seeder
                 'district_id' => null,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['pejabat_penandatangan'],
             ],
             // 5. Pejabat Penandatangan / Kabid Rehsos
             [
@@ -82,6 +88,7 @@ class UserSeeder extends Seeder
                 'district_id' => null,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['pejabat_penandatangan'],
             ],
             // 6. Pejabat Penandatangan / Kepala Dinas Sosial (Tanda Tangan Final)
             [
@@ -93,6 +100,7 @@ class UserSeeder extends Seeder
                 'district_id' => null,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['pejabat_penandatangan', 'pimpinan'],
             ],
             // 7. Pimpinan / Bupati / Pengawas (Read Only Dashboard)
             [
@@ -104,6 +112,7 @@ class UserSeeder extends Seeder
                 'district_id' => null,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['pimpinan'],
             ],
             // 8. Operator Kecamatan Kanigoro
             [
@@ -115,6 +124,7 @@ class UserSeeder extends Seeder
                 'district_id' => $kanigoroDistrict?->id,
                 'village_id' => null,
                 'is_active' => true,
+                'roles' => ['operator_kecamatan_desa'],
             ],
             // 9. Operator Desa Satreyan (Puskesos)
             [
@@ -126,6 +136,7 @@ class UserSeeder extends Seeder
                 'district_id' => $kanigoroDistrict?->id,
                 'village_id' => $satreyanVillage?->id,
                 'is_active' => true,
+                'roles' => ['operator_kecamatan_desa'],
             ],
             // 10. Masyarakat / Pemohon 1
             [
@@ -137,6 +148,7 @@ class UserSeeder extends Seeder
                 'district_id' => $kanigoroDistrict?->id,
                 'village_id' => $satreyanVillage?->id,
                 'is_active' => true,
+                'roles' => ['masyarakat'],
             ],
             // 11. Masyarakat / Pemohon 2
             [
@@ -148,6 +160,7 @@ class UserSeeder extends Seeder
                 'district_id' => $kanigoroDistrict?->id,
                 'village_id' => $kanigoroVillage?->id,
                 'is_active' => true,
+                'roles' => ['masyarakat'],
             ],
             // 12. Masyarakat / Pelapor 3
             [
@@ -159,17 +172,25 @@ class UserSeeder extends Seeder
                 'district_id' => $garumDistrict?->id,
                 'village_id' => $garumVillage?->id,
                 'is_active' => true,
+                'roles' => ['masyarakat'],
             ],
         ];
 
         foreach ($users as $userData) {
-            User::updateOrCreate(
+            $roles = $userData['roles'] ?? [];
+            unset($userData['roles']);
+
+            $user = User::updateOrCreate(
                 ['email' => $userData['email']],
                 array_merge($userData, [
                     'password' => Hash::make('password'),
                     'email_verified_at' => now(),
                 ])
             );
+
+            if (!empty($roles)) {
+                $user->syncRoles($roles);
+            }
         }
     }
 }

@@ -38,6 +38,36 @@ class RehabilitationCase extends Model
         ];
     }
 
+    protected static function booted(): void
+    {
+        static::creating(function (RehabilitationCase $case) {
+            if (empty($case->case_number)) {
+                $case->case_number = NumberSequence::next('RHS');
+            }
+            if (empty($case->received_at)) {
+                $case->received_at = now();
+            }
+            if (empty($case->status)) {
+                $case->status = RehabilitationCaseStatus::RECEIVED;
+            }
+        });
+
+        static::updated(function (RehabilitationCase $case) {
+            if ($case->wasChanged('status')) {
+                $from = $case->getOriginal('status');
+                $fromVal = $from instanceof RehabilitationCaseStatus ? $from->value : $from;
+                $toVal = $case->status instanceof RehabilitationCaseStatus ? $case->status->value : $case->status;
+
+                $case->statusHistories()->create([
+                    'from_status' => $fromVal,
+                    'to_status' => $toVal,
+                    'notes' => $case->status_notes ?? 'Pembaruan status kasus rehabilitasi',
+                    'user_id' => auth()->id() ?? $case->officer_id,
+                ]);
+            }
+        });
+    }
+
     public function client(): BelongsTo
     {
         return $this->belongsTo(Client::class);

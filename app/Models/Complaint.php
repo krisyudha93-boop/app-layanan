@@ -41,6 +41,36 @@ class Complaint extends Model
         ];
     }
 
+    protected static function booted(): void
+    {
+        static::creating(function (Complaint $complaint) {
+            if (empty($complaint->complaint_number)) {
+                $complaint->complaint_number = NumberSequence::next('ADU');
+            }
+            if (empty($complaint->reported_at)) {
+                $complaint->reported_at = now();
+            }
+            if (empty($complaint->status)) {
+                $complaint->status = ComplaintStatus::RECEIVED;
+            }
+        });
+
+        static::updated(function (Complaint $complaint) {
+            if ($complaint->wasChanged('status')) {
+                $from = $complaint->getOriginal('status');
+                $fromVal = $from instanceof ComplaintStatus ? $from->value : $from;
+                $toVal = $complaint->status instanceof ComplaintStatus ? $complaint->status->value : $complaint->status;
+
+                $complaint->statusHistories()->create([
+                    'from_status' => $fromVal,
+                    'to_status' => $toVal,
+                    'notes' => $complaint->status_notes ?? 'Pembaruan status pengaduan',
+                    'user_id' => auth()->id() ?? $complaint->officer_id,
+                ]);
+            }
+        });
+    }
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(ComplaintCategory::class, 'complaint_category_id');
