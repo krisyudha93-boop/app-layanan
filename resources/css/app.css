@@ -2,8 +2,125 @@
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../../app/Livewire/**/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-primary: #00445c;
+    --color-primary-container: #0f5c7a;
+    --color-on-primary: #ffffff;
+    --color-on-primary-container: #95d3f5;
+    --color-primary-fixed: #c2e8ff;
+    --color-primary-fixed-dim: #90cef1;
+    --color-on-primary-fixed: #001e2c;
+    --color-on-primary-fixed-variant: #004d68;
+    --color-inverse-primary: #90cef1;
+
+    --color-secondary: #835500;
+    --color-secondary-container: #feae2c;
+    --color-on-secondary: #ffffff;
+    --color-on-secondary-container: #6b4500;
+    --color-secondary-fixed: #ffddb4;
+    --color-secondary-fixed-dim: #ffb955;
+    --color-on-secondary-fixed: #291800;
+    --color-on-secondary-fixed-variant: #633f00;
+
+    --color-tertiary: #004927;
+    --color-tertiary-container: #006337;
+    --color-on-tertiary: #ffffff;
+    --color-on-tertiary-container: #83dea2;
+    --color-tertiary-fixed: #9af6b8;
+    --color-tertiary-fixed-dim: #7ed99e;
+    --color-on-tertiary-fixed: #00210f;
+    --color-on-tertiary-fixed-variant: #00522d;
+
+    --color-background: #f1fbff;
+    --color-on-background: #0a1e24;
+
+    --color-surface: #f1fbff;
+    --color-on-surface: #0a1e24;
+    --color-surface-dim: #c8dee6;
+    --color-surface-bright: #f1fbff;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #e2f7ff;
+    --color-surface-container: #dcf1fa;
+    --color-surface-container-high: #d6ecf4;
+    --color-surface-container-highest: #d1e6ee;
+    --color-on-surface-variant: #40484d;
+    --color-surface-variant: #d1e6ee;
+    --color-surface-tint: #1f6583;
+
+    --color-inverse-surface: #203339;
+    --color-inverse-on-surface: #dff4fc;
+
+    --color-outline: #70787e;
+    --color-outline-variant: #c0c7ce;
+
+    --color-error: #ba1a1a;
+    --color-error-container: #ffdad6;
+    --color-on-error: #ffffff;
+    --color-on-error-container: #93000a;
+
+    --font-headline: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Material Symbols Outlined Configuration */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Civic Typography Helpers */
+.font-display { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+.font-headline-lg { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; }
+.font-headline-md { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; }
+.font-headline-sm { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
+.font-title-lg { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
+.font-title-md { font-family: 'Inter', sans-serif; font-weight: 600; }
+.font-body-lg { font-family: 'Inter', sans-serif; font-weight: 400; }
+.font-body-md { font-family: 'Inter', sans-serif; font-weight: 400; }
+.font-body-sm { font-family: 'Inter', sans-serif; font-weight: 400; }
+.font-label-lg { font-family: 'Inter', sans-serif; font-weight: 600; }
+.font-label-md { font-family: 'Inter', sans-serif; font-weight: 600; }
+.font-label-sm { font-family: 'Inter', sans-serif; font-weight: 500; }
+
+.text-display { font-size: 48px; line-height: 56px; letter-spacing: -0.02em; }
+.text-headline-lg { font-size: 36px; line-height: 44px; letter-spacing: -0.02em; }
+.text-headline-md { font-size: 24px; line-height: 32px; letter-spacing: -0.01em; }
+.text-headline-sm { font-size: 20px; line-height: 28px; letter-spacing: 0; }
+.text-title-lg { font-size: 18px; line-height: 26px; }
+.text-title-md { font-size: 16px; line-height: 24px; }
+.text-body-lg { font-size: 18px; line-height: 28px; }
+.text-body-md { font-size: 16px; line-height: 24px; }
+.text-body-sm { font-size: 14px; line-height: 20px; }
+.text-label-lg { font-size: 14px; line-height: 20px; }
+.text-label-md { font-size: 12px; line-height: 16px; }
+.text-label-sm { font-size: 11px; line-height: 14px; }
+
+/* Custom Scrollbar for Civic Feel */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1fbff;
+}
+::-webkit-scrollbar-thumb {
+    background: #c0c7ce;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #70787e;
 }

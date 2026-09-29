@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAPA SOSIAL Kabupaten Blitar - Pengaduan &amp; Layanan Terpadu</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error": "#ba1a1a",
+            "surface-container-high": "#d6ecf4",
+            "outline": "#70787e",
+            "secondary-fixed-dim": "#ffb955",
+            "on-tertiary-fixed": "#00210f",
+            "outline-variant": "#c0c7ce",
+            "on-primary": "#ffffff",
+            "secondary": "#835500",
+            "on-secondary-fixed-variant": "#633f00",
+            "surface-container-highest": "#d1e6ee",
+            "tertiary-fixed-dim": "#7ed99e",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#e2f7ff",
+            "on-background": "#0a1e24",
+            "secondary-fixed": "#ffddb4",
+            "on-surface": "#0a1e24",
+            "on-secondary-fixed": "#291800",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#90cef1",
+            "surface-tint": "#1f6583",
+            "surface": "#f1fbff",
+            "on-secondary": "#ffffff",
+            "surface-container": "#dcf1fa",
+            "tertiary-fixed": "#9af6b8",
+            "tertiary-container": "#006337",
+            "inverse-surface": "#203339",
+            "on-secondary-container": "#6b4500",
+            "secondary-container": "#feae2c",
+            "on-error": "#ffffff",
+            "on-primary-container": "#95d3f5",
+            "on-primary-fixed": "#001e2c",
+            "on-tertiary-container": "#83dea2",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#004d68",
+            "primary-fixed-dim": "#90cef1",
+            "on-surface-variant": "#40484d",
+            "surface-bright": "#f1fbff",
+            "primary": "#00445c",
+            "on-tertiary-fixed-variant": "#00522d",
+            "background": "#f1fbff",
+            "tertiary": "#004927",
+            "surface-dim": "#c8dee6",
+            "inverse-on-surface": "#dff4fc",
+            "primary-fixed": "#c2e8ff",
+            "primary-container": "#0f5c7a",
+            "surface-variant": "#d1e6ee"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2rem",
+            "margin-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-2xl": "3rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "display": ["Plus Jakarta Sans"],
+            "title-md": ["Inter"],
+            "display-mobile": ["Plus Jakarta Sans"],
+            "label-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400"}],
+            "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600"}],
+            "display-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "title-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600"}],
+            "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-background min-h-screen antialiased flex flex-col font-body-md text-body-md">
+<!-- Shared Component: TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface docked full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<!-- Brand Logo / Product Name Anchor -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-2xl" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">SAPA SOSIAL</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dinas Sosial Kabupaten Blitar</span>
+</div>
+</div>
+<!-- Navigation Links (Pengaduan is Active based on context) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 active:scale-95 transition-transform duration-150" href="#">Beranda</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 active:scale-95 transition-transform duration-150" href="#">Layanan</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary font-title-md text-title-md pb-1 active:scale-95 transition-transform duration-150" href="#">Pengaduan</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 active:scale-95 transition-transform duration-150" href="#">Cek Status</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 active:scale-95 transition-transform duration-150" href="#">Informasi &amp; FAQ</a>
+</nav>
+<!-- Trailing Actions & Search -->
+<div class="flex items-center gap-3">
+<!-- Search Bar Right -->
+<div class="relative hidden lg:block">
+<input class="h-10 pl-9 pr-3 rounded-lg bg-surface-container-low border border-outline-variant text-on-surface text-body-sm focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none w-48 transition-all duration-200" placeholder="Cari layanan..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-lg" data-icon="search">search</span>
+</div>
+<!-- Trailing Icon Actions -->
+<button class="p-2 text-on-surface-variant hover:text-primary rounded-lg transition-colors" title="Pemberitahuan" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary rounded-lg transition-colors" title="Bantuan" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="help">help</span>
+</button>
+<div class="h-6 w-px bg-outline-variant mx-1"></div>
+<!-- Trailing Action Buttons -->
+<button class="text-primary font-label-lg text-label-lg px-4 py-2 hover:bg-surface-container-low rounded-lg transition-colors active:scale-95 duration-150" type="button">Masuk</button>
+<button class="bg-secondary-container hover:bg-secondary-fixed-dim text-on-surface font-label-lg text-label-lg px-4 py-2 rounded-lg font-semibold shadow-sm transition-all active:scale-95 duration-150" type="button">Daftar</button>
+</div>
+</div>
+</header>
+<!-- Breadcrumbs & Hero Title Section -->
+<div class="bg-surface-container-low border-b border-surface-variant">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<nav class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base" data-icon="home">home</span>
+          Beranda
+        </a>
+<span class="material-symbols-outlined text-sm text-outline" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-semibold">Pengaduan &amp; Layanan Terpadu</span>
+</nav>
+</div>
+</div>
+<!-- Main Canvas -->
+<main class="flex-grow max-w-7xl w-full mx-auto px-6 py-8">
+<!-- Tab Navigation Segment -->
+<div class="mb-8 border-b border-outline-variant flex items-center justify-between">
+<div class="flex gap-4">
+<!-- Tab 1: Active -->
+<button class="pb-4 px-2 border-b-2 border-primary text-primary font-headline-sm text-headline-sm flex items-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-2xl text-primary" data-icon="campaign">campaign</span>
+<span>Sampaikan Pengaduan Sosial</span>
+<span class="bg-secondary-container text-on-surface px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold">Respon Cepat</span>
+</button>
+<!-- Tab 2: Secondary / Inactive -->
+<button class="pb-4 px-4 border-b-2 border-transparent text-on-surface-variant hover:text-primary font-headline-sm text-headline-sm flex items-center gap-2 transition-all opacity-70 hover:opacity-100" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="assignment_add">assignment_add</span>
+<span>Pengajuan Layanan Sosial Lainnya</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-2 text-body-sm text-on-surface-variant pb-3">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="verified_user">verified_user</span>
+<span>Layanan Resmi Dinas Sosial Kab. Blitar</span>
+</div>
+</div>
+<!-- Layout Grid: Form (8 cols) & Sidebar (4 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Form Pengaduan Tab 1 Content -->
+<section class="lg:col-span-8 flex flex-col gap-6">
+<!-- Intro Header Card -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Sampaikan Pengaduan &amp; Masalah Sosial Lingkungan Anda</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Laporan Anda akan segera diverifikasi dan ditindaklanjuti oleh Tim Reaksi Cepat Dinsos &amp; Puskesos Kecamatan. Identitas Anda terjamin kerahasiaannya.
+              </p>
+</div>
+</div>
+</div>
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault();">
+<!-- 1. Kategori Pengaduan -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">1</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Pilih Kategori Permasalahan Sosial</h2>
+</div>
+<span class="font-label-sm text-label-sm text-error font-medium">* Wajib dipilih</span>
+</div>
+<!-- Bento Card Grid for Categories -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+<!-- Category 1 -->
+<label class="cursor-pointer group relative border-2 border-outline-variant hover:border-primary rounded-xl p-4 transition-all duration-200 bg-surface-container-lowest hover:bg-surface-container-low flex items-start gap-3.5">
+<input class="mt-1 text-primary-container focus:ring-primary" name="kategori" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="elderly">elderly</span>
+<span class="font-title-md text-title-md text-on-surface">Lansia Terlantar / Dhuafa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Lansia tanpa keluarga pengasuh, hidup sebatang kara dan butuh santunan/panti.</p>
+</div>
+</label>
+<!-- Category 2 -->
+<label class="cursor-pointer group relative border-2 border-outline-variant hover:border-primary rounded-xl p-4 transition-all duration-200 bg-surface-container-lowest hover:bg-surface-container-low flex items-start gap-3.5">
+<input class="mt-1 text-primary-container focus:ring-primary" name="kategori" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="child_care">child_care</span>
+<span class="font-title-md text-title-md text-on-surface">Anak Terlantar &amp; Butuh Perlindungan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Anak putus sekolah, pengemis jalanan, yatim piatu butuh naungan perlindungan.</p>
+</div>
+</label>
+<!-- Category 3 -->
+<label class="cursor-pointer group relative border-2 border-outline-variant hover:border-primary rounded-xl p-4 transition-all duration-200 bg-surface-container-lowest hover:bg-surface-container-low flex items-start gap-3.5">
+<input class="mt-1 text-primary-container focus:ring-primary" name="kategori" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="accessible">accessible</span>
+<span class="font-title-md text-title-md text-on-surface">Penyandang Disabilitas Butuh Bantuan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Bantuan alat bantu gerak, kursi roda, pelatihan kemandirian &amp; terapi.</p>
+</div>
+</label>
+<!-- Category 4 -->
+<label class="cursor-pointer group relative border-2 border-outline-variant hover:border-primary rounded-xl p-4 transition-all duration-200 bg-surface-container-lowest hover:bg-surface-container-low flex items-start gap-3.5">
+<input class="mt-1 text-primary-container focus:ring-primary" name="kategori" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="psychology">psychology</span>
+<span class="font-title-md text-title-md text-on-surface">ODGJ Terlantar / Butuh Penanganan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Evakuasi warga terindikasi gangguan jiwa terlantar/pemasungan di permukiman.</p>
+</div>
+</label>
+<!-- Category 5 (With Badge Penanganan Segera) -->
+<label class="cursor-pointer group relative border-2 border-primary bg-surface-container-low rounded-xl p-4 transition-all duration-200 flex items-start gap-3.5">
+<input checked="" class="mt-1 text-primary-container focus:ring-primary" name="kategori" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-xl" data-icon="health_and_safety">health_and_safety</span>
+<span class="font-title-md text-title-md text-on-surface">Korban Kekerasan / KDRT</span>
+</div>
+<span class="bg-error-container text-on-error-container px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                      Penanganan Segera
+                    </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pendampingan trauma, perlindungan hukum, dan shelter aman darurat.</p>
+</div>
+</label>
+<!-- Category 6 -->
+<label class="cursor-pointer group relative border-2 border-outline-variant hover:border-primary rounded-xl p-4 transition-all duration-200 bg-surface-container-lowest hover:bg-surface-container-low flex items-start gap-3.5">
+<input class="mt-1 text-primary-container focus:ring-primary" name="kategori" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="receipt_long">receipt_long</span>
+<span class="font-title-md text-title-md text-on-surface">Dugaan Salah Sasaran Bansos / Bantuan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Laporan ketidaksesuaian penerima PKH, BPNT, atau BLT daerah.</p>
+</div>
+</label>
+<!-- Category 7 -->
+<label class="cursor-pointer group relative md:col-span-2 border-2 border-outline-variant hover:border-primary rounded-xl p-4 transition-all duration-200 bg-surface-container-lowest hover:bg-surface-container-low flex items-start gap-3.5">
+<input class="mt-1 text-primary-container focus:ring-primary" name="kategori" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="pending">pending</span>
+<span class="font-title-md text-title-md text-on-surface">Permasalahan Sosial Lainnya</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Masalah kesejahteraan warga, tunawisma musiman, atau penanganan bencana sosial skala komunitas.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- 2. Lokasi Kejadian (Penting untuk Penjangkauan Petugas) -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">2</span>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">Lokasi Kejadian</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Penting dan akurat untuk penjangkauan cepat Tim Reaksi Cepat Dinsos</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+<!-- Kecamatan Dropdown -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1.5">Kecamatan <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-4 pr-10 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none appearance-none">
+<option value="">Pilih Kecamatan di Kab. Blitar</option>
+<option selected="" value="kanigoro">Kanigoro (Pusat Kab. Blitar)</option>
+<option value="wlingi">Wlingi</option>
+<option value="srengat">Srengat</option>
+<option value="garum">Garum</option>
+<option value="sutojayan">Sutojayan</option>
+<option value="nglegok">Nglegok</option>
+<option value="sanankulon">Sanankulon</option>
+<option value="kesamben">Kesamben</option>
+<option value="kademangan">Kademangan</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Desa / Kelurahan -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1.5">Desa / Kelurahan <span class="text-error">*</span></label>
+<input class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-4 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none" placeholder="Contoh: Kelurahan Satreyan / Desa Sawentar" type="text" value="Kelurahan Kanigoro"/>
+</div>
+</div>
+<!-- Detail Titik Lokasi / Patokan -->
+<div class="mb-4">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1.5">Detail Titik Lokasi &amp; Patokan Rumah/Kejadian <span class="text-error">*</span></label>
+<input class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-4 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none" placeholder="Contoh: RT 03/RW 02, 50m di utara Pasar Kanigoro, rumah cat hijau pagar bambu" type="text" value="RT 02 RW 04, gang samping Musholla Al-Ikhlas, rumah berdinding anyaman bambu"/>
+</div>
+<!-- Pin Peta / GPS Marker mock -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1.5">Pin Koordinat Peta / GPS Lokasi</label>
+<div class="relative w-full h-44 rounded-xl border border-outline-variant overflow-hidden bg-surface-container-high flex flex-col justify-end p-3" data-location="Kabupaten Blitar" style="">
+<!-- Mock Map visual layer -->
+<div class="absolute inset-0 bg-cover bg-center opacity-85" data-alt="A detailed aerial map overview of Kanigoro Kabupaten Blitar showing structured roads, green community spaces, and civic buildings under daylight. The aesthetic is clean and modern, following civic government cartography standards with subtle teal navigational accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhF7ExbVEDPRP4jzR5CfQE2asJWx0e1GKPm0-fr-KJlJJey2O0WQKGWTpMx8VahSX1k5C1zdqTD4LvbJzDTQUqKjZQOTC30kI1wSsxq97vyb3mr-V10Iy2ZCFugqSCYN63hoeReHxPXEMjToqXNi4-upiARA33wBh_k781o6Fbr2q8d2gOkrdCo3C1--Ck7MByCLZL98GRoXFRsBNI-w7oWVMZ59YcMalN15gi4eAqXrgRz1KGJqQH')">
+</div>
+<!-- GPS Marker overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-error text-4xl drop-shadow-md animate-bounce" data-icon="location_on" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="bg-inverse-surface text-inverse-on-surface px-2.5 py-0.5 rounded text-label-sm font-label-sm shadow font-mono">-8.1324, 112.2185</span>
+</div>
+</div>
+<!-- Map control helper -->
+<div class="relative z-10 flex items-center justify-between bg-surface-container-lowest/90 backdrop-blur-sm p-2 rounded-lg border border-outline-variant shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base" data-icon="my_location">my_location</span>
+<span class="font-body-sm text-body-sm text-on-surface">Titik Pin Terpilih: Kanigoro, Kab. Blitar</span>
+</div>
+<button class="text-primary hover:underline font-label-md text-label-md font-semibold" type="button">Ubah Titik Pin</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Deskripsi Permasalahan -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">3</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Deskripsi Permasalahan Sosial</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">184 / 1000 karakter</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Jelaskan kronologi, kondisi fisik/ekonomi korban, dan bentuk bantuan darurat yang sangat mendesak dibutuhkan saat ini.</p>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-4 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none" placeholder="Tuliskan keterangan lengkap di sini..." rows="4">Ibu Sukarmi (74 tahun) tinggal sebatang kara dengan kondisi sakit stroke ringan sejak seminggu terakhir. Tidak ada keluarga yang merawat dan kebutuhan pangan harian saat ini hanya mengandalkan belas kasihan tetangga sekitar. Sangat membutuhkan evakuasi medis dan bantuan permakanan rutin.</textarea>
+</div>
+<!-- 4. Unggah Foto Bukti Kejadian / Dokumen -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">4</span>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">Unggah Foto Bukti Kejadian / Kondisi</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maksimal 4 file foto (JPG, PNG, maks. 5MB per berkas) untuk mempermudah verifikasi tim lapangan.</p>
+</div>
+</div>
+<!-- Drag & Drop Zone -->
+<div class="border-2 border-dashed border-primary/40 hover:border-primary bg-surface-container-low/40 rounded-xl p-6 text-center transition-colors cursor-pointer mb-4">
+<span class="material-symbols-outlined text-primary text-4xl mb-2" data-icon="cloud_upload">cloud_upload</span>
+<p class="font-title-md text-title-md text-on-surface">Tarik &amp; Lepas Foto di Sini, atau <span class="text-primary underline">Pilih Berkas</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dukung laporan dengan foto rumah, kondisi warga, atau dokumen pendukung</p>
+</div>
+<!-- Uploaded Thumbnails -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- File 1 -->
+<div class="flex items-center justify-between p-3 border border-outline-variant rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-cover bg-center border border-outline-variant relative overflow-hidden" data-alt="A clean close-up evidentiary photograph showing an elderly Indonesian resident sitting safely inside a modest rural home in Blitar. High-key natural lighting and a compassionate documentary aesthetic emphasizing dignity and care." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCu807egQPDRjBluZ0m86SGFRymItd_pYfn084p01UhE_l6NXWbiXW8TaDNLzsMaFgkUn17kvsoF7cK96tRRexXWIIpu03ugBwObhJVJNwor96Z6N0RQ9sMHaeFUcgU_FP86z9JCNzy6lahOeop-MUWzEkkLL1mZ3Pz_fZOGdhjGXrwWqpQQF-0o4dL7Lo8UUO1e9vazr5Ln13yBu5IApip9-jq5bPxLXCmhUYl5Ki5gWX2yVZ_IW27')">
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block truncate max-w-[150px]">foto_kondisi_warga_1.jpg</span>
+<span class="font-label-sm text-label-sm text-outline">1.8 MB • Selesai</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Terlampir</span>
+<button class="text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- File 2 -->
+<div class="flex items-center justify-between p-3 border border-outline-variant rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-cover bg-center border border-outline-variant relative overflow-hidden" data-alt="Exterior documentary photograph of a humble traditional wooden and woven bamboo house in rural East Java surrounded by natural foliage. Soft morning lighting with an honest, civic-centered humanitarian documentary tone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmkNC9zg132js2keY__YrLiPQ5QbzoY72PtKTkicOBB43pq2vVq0mPj5lyFb5aFniUjX3bUEDu1wTEOQDn67AavDSLsrW4qHsHzLUfkdLmTiOd6p8045KO3zkCOoAHQISSRBdaZ54ym8mk4jSFMqcwPBJrsKICTCShBAN2Az48_VpRfhFL2g8276TCGwIjnFRLilVeI4873XlsbZKxbDALhuev1MDR9kO01fS_A7lt4K4z7hwUure-')">
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block truncate max-w-[150px]">foto_rumah.jpg</span>
+<span class="font-label-sm text-label-sm text-outline">2.3 MB • Selesai</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Terlampir</span>
+<button class="text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Data Pelapor & Privasi -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">5</span>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">Data Pelapor &amp; Perlindungan Kerahasiaan</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kontak Anda hanya dipakai oleh petugas Dinsos untuk koordinasi lapangan dan tidak dipublikasikan.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1.5">Nama Lengkap Pelapor <span class="text-error">*</span></label>
+<input class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg px-4 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none" type="text" value="Bambang Prasetyo, S.Sos"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1.5">Nomor WhatsApp Aktif <span class="text-error">*</span></label>
+<div class="relative">
+<span class="absolute left-3 top-3 text-on-surface-variant font-body-md font-semibold">+62</span>
+<input class="w-full h-12 bg-surface-container-lowest border border-outline-variant rounded-lg pl-12 pr-4 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none" type="tel" value="812-3456-7890"/>
+</div>
+</div>
+</div>
+<!-- Privacy Checkbox Toggle -->
+<label class="flex items-start gap-3 p-3.5 bg-surface-container-low rounded-lg cursor-pointer border border-outline-variant">
+<input checked="" class="mt-1 rounded text-primary-container focus:ring-primary w-4 h-4" type="checkbox"/>
+<div class="text-body-sm text-on-surface">
+<span class="font-semibold text-primary block">Laporkan Secara Anonim / Samarkan Nama Saya untuk Publik</span>
+<span class="text-on-surface-variant text-label-sm">Nama dan nomor kontak Anda sepenuhnya dienkripsi, hanya Petugas Penanganan Resmi Dinsos Kab. Blitar yang dapat menghubungi Anda untuk verifikasi lokasi.</span>
+</div>
+</label>
+</div>
+<!-- 6. Tombol Kirim & Preview Badge -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 bg-surface-container-lowest border border-surface-variant rounded-xl shadow-sm">
+<div class="flex items-center gap-3">
+<div class="p-2.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="confirmation_number">confirmation_number</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Format Tiket Registrasi:</span>
+<div class="inline-flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded text-primary font-mono font-bold text-label-md">
+<span class="material-symbols-outlined text-sm" data-icon="tag">tag</span>
+                  ADU-202610-00004
+                </div>
+</div>
+</div>
+<!-- Warm Amber CTA as mandated by Civic Dignity Design System -->
+<button class="w-full sm:w-auto bg-[#F5A623] hover:bg-[#E09215] text-[#1A202C] font-semibold font-title-md text-title-md px-8 py-3.5 rounded-lg shadow-sm hover:shadow transition-all duration-150 flex items-center justify-center gap-2 active:scale-95" type="submit">
+<span class="material-symbols-outlined text-xl" data-icon="send">send</span>
+<span>Kirim Laporan Pengaduan</span>
+</button>
+</div>
+</form>
+</section>
+<!-- Right Column: Sidebar (Alur Kerja & SP4N-LAPOR!) -->
+<aside class="lg:col-span-4 flex flex-col gap-6 sticky top-24">
+<!-- SP4N-LAPOR! Integrated Civic Banner -->
+<div class="bg-surface-container-lowest border-2 border-primary-container rounded-xl p-5 shadow-sm overflow-hidden relative">
+<div class="absolute -right-4 -bottom-4 text-surface-container-high/40 pointer-events-none">
+<span class="material-symbols-outlined text-8xl" data-icon="gavel">gavel</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-error text-on-error font-label-sm text-label-sm font-bold px-2 py-0.5 rounded">TERINTEGRASI</span>
+<span class="font-title-md text-title-md text-primary font-bold">SP4N-LAPOR! RI</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant relative z-10">
+            Kanal Pengaduan Resmi Pemkab Blitar terhubung langsung dengan Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional (SP4N-LAPOR!). Setiap aduan diawasi oleh KemenPAN-RB &amp; Ombudsman RI.
+          </p>
+<div class="mt-4 pt-3 border-t border-outline-variant flex items-center justify-between text-label-md text-label-md font-semibold text-primary">
+<span>Standar SLA: 1x24 Jam</span>
+<span class="material-symbols-outlined text-lg" data-icon="verified">verified</span>
+</div>
+</div>
+<!-- Alur Penanganan Aduan (Stepped Flow) -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-title-lg text-title-lg text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="alt_route">alt_route</span>
+            Alur Penanganan Aduan
+          </h3>
+<div class="relative flex flex-col gap-6 pl-4 border-l-2 border-primary-container/30 ml-2">
+<!-- Step 1 -->
+<div class="relative">
+<span class="absolute -left-[25px] top-0 w-4 h-4 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-outline block">TAHAP 01</span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Laporan Masuk</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sistem mencatat laporan warga dan menerbitkan nomor registrasi tiket unik.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<span class="absolute -left-[25px] top-0 w-4 h-4 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-secondary block font-bold">TAHAP 02 (MAKS. 24 JAM)</span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Verifikasi 24 Jam</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Operator Puskesos menghubungi pelapor untuk validasi data &amp; alamat warga bersangkutan.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<span class="absolute -left-[25px] top-0 w-4 h-4 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-outline block">TAHAP 03</span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Tim Reaksi Cepat ke Lokasi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Petugas lapangan Dinsos &amp; relawan TKSK mendatangi titik koordinat penanganan.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<span class="absolute -left-[25px] top-0 w-4 h-4 rounded-full bg-tertiary-container ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-tertiary block font-bold">TAHAP 04</span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Solusi Sosial &amp; Laporan Tuntas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Bantuan logistik, rujukan rumah sakit, atau penempatan di panti asuhan/lansia.</p>
+</div>
+</div>
+</div>
+<!-- Contact Box & Call Center -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-5">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" data-icon="phone_in_talk">phone_in_talk</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-bold">Layanan Darurat Dinsos 24 Jam</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hotline Siaga &amp; WhatsApp Center</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center justify-between p-2.5 bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-primary transition-colors" href="tel:112">
+<span class="font-label-lg text-label-lg font-bold text-primary">Emergency Call 112 (Bebas Pulsa)</span>
+<span class="material-symbols-outlined text-primary text-base" data-icon="call">call</span>
+</a>
+<a class="flex items-center justify-between p-2.5 bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-primary transition-colors" href="#">
+<span class="font-body-sm text-body-sm text-on-surface">WA Respon Cepat: +62 811-300-889</span>
+<span class="material-symbols-outlined text-tertiary text-base" data-icon="chat">chat</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-primary dark:bg-inverse-surface border-t border-primary-container dark:border-outline text-on-primary dark:text-inverse-on-surface mt-16">
+<div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Left Logo & Info -->
+<div class="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
+<div class="w-12 h-12 rounded-lg bg-on-primary text-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-2xl font-bold" data-icon="apartment">apartment</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-primary dark:text-inverse-on-surface block">SAPA SOSIAL</span>
+<p class="font-body-sm text-body-sm text-surface-variant dark:text-outline-variant max-w-md mt-1">
+            © 2025 Dinas Sosial Kabupaten Blitar. Pemerintah Kabupaten Blitar. Hak Cipta Dilindungi Undang-Undang.
+          </p>
+</div>
+</div>
+<!-- Links & Navigation -->
+<nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-body-sm font-body-sm">
+<a class="text-surface-variant dark:text-outline-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-150 active:opacity-80" href="#">Kebijakan Privasi</a>
+<a class="text-surface-variant dark:text-outline-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-150 active:opacity-80" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-surface-variant dark:text-outline-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-150 active:opacity-80" href="#">Aksesibilitas</a>
+<a class="text-surface-variant dark:text-outline-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-150 active:opacity-80" href="#">Peta Situs</a>
+<a class="text-secondary-fixed dark:text-secondary-fixed-dim font-bold hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-150 active:opacity-80" href="#">Kontak Darurat SP4N-LAPOR!</a>
+</nav>
+</div>
+</footer>
+</body></html>
